@@ -74,10 +74,10 @@ class HomeTwo extends StatelessWidget {
                                     shrinkWrap: true,
                                     itemBuilder: (context, index) {
                                       return BlogTile(
-                                        imageUrl: state.newsItems[index].urlToImage,
-                                        desc: state.newsItems[index].description,
-                                        title: state.newsItems[index].title,
-                                        url: state.newsItems[index].url,
+                                        imageUrl: state.newsItems[index].urlToImage ?? '',
+                                        desc: state.newsItems[index].description ?? '',
+                                        title: state.newsItems[index].title ?? '',
+                                        url: state.newsItems[index].url ?? '',
                                       );
                                     },
                                   ),

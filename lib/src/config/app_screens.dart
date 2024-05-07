@@ -7,6 +7,7 @@ import 'package:newsapi_getx/src/pages/category_news/ui/category_news_page.dart'
 import 'package:newsapi_getx/src/pages/home_getx/application/home_binding.dart';
 import 'package:newsapi_getx/src/pages/home_getx/ui/home_page.dart';
 import 'package:newsapi_getx/src/pages/home_bloc/ui/home_two_page.dart';
+import 'package:newsapi_getx/src/pages/login/ui/login_page.dart';
 import 'package:newsapi_getx/src/pages/splash/application/splash_binding.dart';
 import 'package:newsapi_getx/src/pages/splash/ui/splash_page.dart';
 
@@ -37,6 +38,10 @@ class AppScreens {
     GetPage(
       name: AppRoutes.HOME_TWO,
       page: () => HomeTwo(),
+    ),
+    GetPage(
+      name: AppRoutes.Login_Page,
+      page: () => LoginPage(),
     ),
   ];
 }

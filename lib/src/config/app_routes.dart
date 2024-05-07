@@ -4,4 +4,5 @@ class AppRoutes {
   static const CATEGORIES_SCREEN = "/categories";
   static const ARTICLE_VIEW = "/article";
   static const HOME_TWO = "/home_two";
+  static const Login_Page = "/login_page";
 }

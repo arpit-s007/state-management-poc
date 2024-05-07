@@ -13,7 +13,7 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
   HomeBloc() : super(HomeStateInitial()) {
     on<GetNewsEvent>((event, emit) async{
       emit(HomeStateLoading());
-      List<ArticleModel> news = [];
+      List<Articles> news = [];
       var url = Uri.parse(
           "https://newsapi.org/v2/top-headlines?country=in&category=business&apiKey=09a63c9dc1ce42908522bc7c784a8a43");
 
@@ -23,17 +23,17 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
 
       try {
         if (jsonData['status'] == "ok") {
-        jsonData["articles"].forEach((element) {
-          if (element["urlToImage"] != null && element['description'] != null) {
-            ArticleModel articleModel = ArticleModel(
-              title: element['title'],
-              description: element['description'],
-              url: element['url'],
-              urlToImage: element['urlToImage'],
-            );
-            news.add(articleModel);
-          }
-        });
+        // jsonData["articles"].forEach((element) {
+        //   if (element["urlToImage"] != null && element['description'] != null) {
+        //     Articles articleModel = ArticleModel(
+        //       title: element['title'],
+        //       description: element['description'],
+        //       url: element['url'],
+        //       urlToImage: element['urlToImage'],
+        //     );
+        //     news.add(articleModel);
+        //   }
+        // });
         emit(HomeStateLoaded(news));
       } else {
         emit(HomeStateError());

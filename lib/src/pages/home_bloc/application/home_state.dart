@@ -35,7 +35,7 @@ class HomeStateLoading extends HomeState {
 
 @immutable
 class HomeStateLoaded extends HomeState {
-  List<ArticleModel> newsItems;
+  List<Articles> newsItems;
 
    HomeStateLoaded(this.newsItems);
 

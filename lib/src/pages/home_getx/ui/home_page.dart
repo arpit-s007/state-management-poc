@@ -66,10 +66,10 @@ class HomePage extends StatelessWidget {
                           shrinkWrap: true,
                           itemBuilder: (context, index) {
                             return BlogTile(
-                              imageUrl: controller.newsItems[index].urlToImage,
-                              desc: controller.newsItems[index].description,
-                              title: controller.newsItems[index].title,
-                              url: controller.newsItems[index].url,
+                              imageUrl: controller.newsItems[index].urlToImage ?? '',
+                              desc: controller.newsItems[index].description ?? '',
+                              title: controller.newsItems[index].title ?? '',
+                              url: controller.newsItems[index].url ?? '',
                             );
                           },
                         ),
